@@ -28,7 +28,7 @@
         <!--Menu View Controller-->
         <scene sceneID="yTO-LY-y8L">
             <objects>
-                <viewController id="Ocg-f7-UyX" customClass="MenuViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Menu" id="Ocg-f7-UyX" customClass="MenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tya-TM-ibt"/>
                         <viewControllerLayoutGuide type="bottom" id="DFH-a4-VIi"/>
