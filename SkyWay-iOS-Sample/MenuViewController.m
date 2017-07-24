@@ -18,6 +18,7 @@ typedef NS_ENUM(NSUInteger, ViewTag)
 
 
 @implementation MenuViewController
+@synthesize userName = _userName;                                    //meeting room name
 
 - (void)viewDidLoad
 {
@@ -123,4 +124,20 @@ typedef NS_ENUM(NSUInteger, ViewTag)
 	}
 }
 
+- (IBAction)ChangeGreeting:(id)sender {/////////////////////////meeting room name
+    self.userName = self.textField.text;
+    NSString *nameString = self.userName;
+    if ([nameString length] == 0) {
+        nameString = @"Nowone";
+    }
+    NSString *greeting = [[NSString alloc] initWithFormat:@"Hello, %@!", nameString];
+    self.label.text = greeting;
+ }
+- (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
+        if(theTextField == self.textField) {
+            [theTextField resignFirstResponder];
+        }
+        return YES;
+    
+}
 @end
